@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Houdini Clouds PaintWorklet</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    html {
+      background-color: rgb(50, 150, 240);
+    }
+
+    main {
+      background: white;
+      padding: 2rem;
+      width: 100%;
+      max-width: 28rem;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    a {
+      color: #f500b8;
+      padding: 0 0.2ex;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      background: #ed2c08;
+      color: white;
+    }
+
+    label {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    h1, p {
+      margin: 0 0 0.4rem;
+    }
+
+    header {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    #cloud-control {
+      font-family:
+        "Andale Mono WT",
+        "Andale Mono",
+        monospace;
+      font-size: 1rem;
+    }
+
+    #cloud-control {
+      display: none;
+      grid-gap: 0.2rem 1rem;
+      grid-template-columns: min-content auto;
+      align-items: center;
+    }
+
+    #no-houdini {
+      background: repeating-linear-gradient(
+        -45deg,
+        #fff6ae,
+        #fff6ae 0.8rem,
+        transparent 0.8rem,
+        transparent 1.6rem
+      );
+      padding: 0.6rem;
+    }
+
+    @supports (background-image: paint(clouds)) {
+      body { background-image: paint(clouds) }
+      #cloud-control { display: grid }
+      #no-houdini { display: none }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>houdini-clouds</h1>
+      <p>
+        A CSS Houdini PaintWorklet.
+        <a href="https://github.com/redoPop/houdini-clouds" rel="external">See repo for details.</a>
+      </p>
+    </header>
+
+    <p id="no-houdini">
+      This client doesn&rsquo;t support PaintWorklet. <br />
+      <a href="https://caniuse.com/mdn-api_paintworkletglobalscope" rel="external">Find a client that does.</a>
+    </p>
+
+    <script>
+      bodyProp = (...args) => document.body.style.setProperty(...args);
+      htmlProp = (...args) => document.body.parentElement.style.setProperty(...args)
+    </script>
+
+    <div id="cloud-control">
+      <label>background-color</label>
+      <input
+        type="color"
+        value="#3296f0"
+        oninput="htmlProp('background-color', this.value)"
+      />
+
+      <label>--cloud-hue</label>
+      <input
+        type="range"
+        min="1"
+        max="360"
+        value="210"
+        oninput="bodyProp('--cloud-hue', this.value)"
+      />
+
+      <label>--cloud-saturation</label>
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value="100"
+        oninput="bodyProp('--cloud-saturation', this.value)"
+      />
+
+      <label>--cloud-lightness</label>
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value="100"
+        oninput="bodyProp('--cloud-lightness', this.value)"
+      />
+
+      <label>--cloud-width</label>
+      <input
+        type="range"
+        min="40"
+        max="300"
+        value="200"
+        oninput="bodyProp('--cloud-width', this.value)"
+        style="width:70%"
+      />
+
+      <label>--cloud-density</label>
+      <input
+        type="range"
+        min="0.01"
+        max="3"
+        value="1"
+        step="0.01"
+        oninput="bodyProp('--cloud-density', this.value)"
+        style="width:70%"
+      />
+
+      <label>--cloud-seed</label>
+      <input
+        type="number"
+        min="1"
+        step="1"
+        value="7"
+        oninput="bodyProp('--cloud-seed', this.value)"
+        style="width:6rem"
+      />
+    </div>
+  </main>
+
+  <script>
+    if ('paintWorklet' in CSS) CSS.paintWorklet.addModule('./worklet.js');
+  </script>
+</body>
+</html>

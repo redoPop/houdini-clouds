@@ -1,0 +1,28 @@
+{
+  "name": "houdini-clouds",
+  "version": "0.1.0",
+  "description": "A Houdini PaintWorklet to draw background clouds.",
+  "main": "clouds.js",
+  "scripts": {
+    "demo": "npx http-server -a localhost -c-1 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redoPop/houdini-clouds.git"
+  },
+  "keywords": [
+    "css",
+    "houdini",
+    "worklet"
+  ],
+  "author": {
+    "name": "Joe Bartlett",
+    "email": "joe@redopop.com",
+    "url": "https://redopop.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redoPop/houdini-clouds/issues"
+  },
+  "homepage": "https://github.com/redoPop/houdini-clouds#readme"
+}
