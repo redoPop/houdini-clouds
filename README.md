@@ -1,5 +1,5 @@
-# Houdini Clouds
-A [CSS Houdini](https://developer.mozilla.org/en-US/docs/Web/Houdini) [PaintWorklet](https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet) to fill a background with clouds, and an experiment in deterministic RNG for Houdini worklets.
+# Houdini Clouds [![NPM Version](https://img.shields.io/npm/v/houdini-clouds.svg?style=flat)](https://npmjs.org/package/houdini-clouds)
+A [CSS Houdini](https://developer.mozilla.org/en-US/docs/Web/Houdini) [PaintWorklet](https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet) to fill a background with clouds, and an experiment in deterministic RNG for Houdini.
 
 ![Screenshot demonstrating the effect of Houdini Clouds](https://github.com/redoPop/houdini-clouds/blob/main/screenshot.png?raw=true)
 
