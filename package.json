@@ -2,7 +2,7 @@
   "name": "houdini-clouds",
   "version": "0.1.0",
   "description": "A Houdini PaintWorklet to draw background clouds.",
-  "main": "clouds.js",
+  "main": "worklet.js",
   "scripts": {
     "demo": "npx http-server -a localhost -c-1 -o"
   },
