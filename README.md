@@ -17,8 +17,10 @@ if ('paintWorklet' in CSS) {
 
 Apply it in CSS:
 ```css
-.element {
-  background-image: paint(clouds);
+@supports (background-image: paint(clouds)) {
+  .element {
+    background-image: paint(clouds);
+  }
 }
 ```
 
