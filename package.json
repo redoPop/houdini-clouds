@@ -21,6 +21,9 @@
     "url": "https://redopop.com"
   },
   "license": "ISC",
+  "files": [
+    "worklet.js"
+  ],
   "bugs": {
     "url": "https://github.com/redoPop/houdini-clouds/issues"
   },
