@@ -1,4 +1,4 @@
-# Houdini Clouds [![NPM Version](https://img.shields.io/npm/v/houdini-clouds.svg?style=flat)](https://npmjs.org/package/houdini-clouds)
+# Houdini Clouds [![NPM Version](https://img.shields.io/npm/v/houdini-clouds.svg?style=flat)](https://npmjs.org/package/houdini-clouds) [![Test Status](https://github.com/redoPop/houdini-clouds/workflows/Tests/badge.svg?branch=main)](https://github.com/redoPop/houdini-clouds/actions?query=workflow%3ATests+branch%3Amain)
 A [CSS Houdini](https://developer.mozilla.org/en-US/docs/Web/Houdini) [PaintWorklet](https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet) to fill a background with clouds, and an experiment in deterministic RNG for Houdini.
 
 ![Screenshot demonstrating the effect of Houdini Clouds](https://github.com/redoPop/houdini-clouds/blob/main/screenshot.png?raw=true)
