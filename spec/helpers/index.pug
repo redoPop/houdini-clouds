@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    style.
+      html {
+        background-color: rgb(50, 150, 240);
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    link(rel="stylesheet" href=`/${test}.css`)
+  body
+    script.
+      CSS.paintWorklet.addModule('/worklet.js')

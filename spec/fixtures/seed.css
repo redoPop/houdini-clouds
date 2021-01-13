@@ -1,0 +1,4 @@
+body {
+  --cloud-seed: 11;
+  background-image: paint(clouds);
+}

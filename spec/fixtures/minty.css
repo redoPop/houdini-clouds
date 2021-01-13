@@ -1,0 +1,6 @@
+body {
+  --cloud-hue: 170;
+  --cloud-saturation: 50;
+  --cloud-lightness: 80;
+  background-image: paint(clouds);
+}

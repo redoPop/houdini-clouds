@@ -4,7 +4,8 @@
   "description": "A Houdini PaintWorklet to draw background clouds.",
   "main": "worklet.js",
   "scripts": {
-    "demo": "npx http-server -a localhost -c-1 -o"
+    "demo": "npx http-server -a localhost -c-1 -o",
+    "test": "jasmine spec/spec.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,13 @@
   "bugs": {
     "url": "https://github.com/redoPop/houdini-clouds/issues"
   },
-  "homepage": "https://github.com/redoPop/houdini-clouds#readme"
+  "homepage": "https://github.com/redoPop/houdini-clouds#readme",
+  "devDependencies": {
+    "express": "^4.17.0",
+    "jasmine": "^3.6.0",
+    "pixelmatch": "^5.2.0",
+    "pngjs": "^6.0.0",
+    "pug": "^3.0.0",
+    "puppeteer": "^5.5.0"
+  }
 }
