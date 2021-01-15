@@ -5,6 +5,9 @@
   "main": "worklet.js",
   "scripts": {
     "demo": "npx http-server -a localhost -c-1 -o",
+    "postpublish": "git push origin --tags",
+    "postversion": "npm publish",
+    "preversion": "npm test",
     "test": "jasmine spec/spec.js"
   },
   "repository": {
